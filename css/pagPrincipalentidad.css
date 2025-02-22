@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #080017;
+    --sec-bg-color: #030a55;
+    --text-color: #ededed;
+    --main-color: #13aeff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 2.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    overflow: hidden;
+}
+
+.inicio-img {
+    position: absolute;
+    max-width: 40%; 
+    right: 10rem;
+    display: block; 
+    z-index: -1; 
+} 
+
+.inicio-content {
+    max-width: 68rem;
+}
+
+.inicio-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.inicio-content .text-secund {
+    position: relative;
+    width: 39.8rem;
+}
+
+.inicio-content .text-secund h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.inicio-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+}
+
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1px;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box .btn:hover {
+    color: var(--main-color);
+}
+
+.btn-box .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn:hover::before{
+    width: 100%;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--sec-bg-color);
+    padding-bottom: 6rem;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sobre span {
+    color: var(--main-color);
+}
+
+.sobre-img {
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-img img {
+    width: 100%;
+}
+
+.sobre-content {
+    text-align: center;
+}
+
+.sobre-content h3{
+    font-size: 2.6rem;
+}
+
+.sobre-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+}
+
+.btn-box.btns a::before {
+    background: var(--bg-color);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconoFlecha a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer-iconoFlecha a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.footer-iconoFlecha a:hover::before {
+    width: 100%;
+}
+
+.footer-iconoFlecha a i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+    transition: .5s;
+}
+
+.footer-iconoFlecha a:hover i {
+    color: var(--main-color);
+}
+
+.ofertas h2{
+    margin-bottom: 5rem;
+}
+
+.ofertas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.ofertas-container .ofertas-caja {
+    flex: 1 1 30rem;
+    background: var(--sec-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.ofertas-container .ofertas-caja:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.ofertas-caja i {
+    font-size: 7rem;
+    color: var(--main-color);
+    pointer-events: none;
+}
+
+.ofertas-caja h3 {
+    font-size: 2.7rem;
+}
+
+.ofertas-caja p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+
+/* Estilo para el formulario de asignación de cupos */
+.cupos {
+    background: var(--sec-bg-color);
+}
+
+.formulario-asignacion form {
+    max-width: 52rem;
+    min-height: 40rem;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);  
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-asignacion label {
+    display: block;
+    color: #fff;
+    font-size: 1.8rem;  
+    margin-bottom: 8px;
+}
+
+
+
+.formulario-asignacion select,
+.formulario-asignacion input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-bottom: 1.8rem;
+}
+
+.formulario-asignacion select:focus,
+.formulario-asignacion input:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.formulario-asignacion input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
+    margin: 0;
+}
+
+.formulario-asignacion input[type="number"]::-webkit-inner-spin-button,
+.formulario-asignacion input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.formulario-asignacion textarea {
+    resize: none;
+}
+
+.formulario-asignacion .btn-box {
+    width: auto;
+}
+
+.formulario-asignacion .btn-box button {
+    width: 25rem;
+    margin: 7rem auto 0 auto;
+    cursor: pointer;
+}
+
+.formulario-asignacion .btn-box button::before {
+    background: var(--bg-color);
+}
+
+.tercertitulo {
+    font-size: 1.8rem;
+}
+
+.hora-actividad {
+    justify-content: space-between;
+    display: flex;
+    align-items: baseline;
+}
+
+.hora-actividad .hora {
+    width: 12rem;
+    margin-right: 1rem;
+    margin-left: -1rem;
+}
+
+.hora-actividad .fecha {
+    width: 18rem;
+    margin-left: -1rem;
+}
+
+/*CONVENIO FORMULARIO*/
+
+.convenio form{
+    max-width: 52rem;
+    min-height: 40rem;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.convenio .input-box {
+    margin-bottom: 1.8rem;
+}
+
+.convenio .input-box.btn-box{
+    width: auto;
+}
+
+.convenio .input-box.btn-box .cc{
+    margin: auto;
+    font-weight: 600;
+}
+
+.convenio label {
+    display: block;
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.convenio input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-bottom: 1.8rem;
+}
+
+.convenio .btn-box {
+    width: auto;
+}
+
+.convenio .btn-box .boton-renovar {
+    width: 30rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+
+
+
+.convenio
+
+/*INFORMES ENTIDAD*/
+.informes{
+    background: var(--sec-bg-color);
+}
+
+.informes form{
+    max-width: 52rem;
+    min-height: 40rem;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.informes .heading span{
+    color: var(--main-color);
+}
+
+/* Estilo para el icono de fecha en Chrome, Safari y Edge */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.informes .input-box.btn-box {
+    width: auto;
+}
+
+.informes .input-box {
+    margin-bottom: 1.5rem;
+}
+
+.informes label {
+    display: block;
+    color: #fff;
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+
+.informes input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.informes input[type="file"]{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.informes .btn-box {
+    width: auto;
+}
+
+.informes .btn-box .boton-informe{
+    width: 25rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.informes textarea {
+    resize: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 100%;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*Monitorear Estudiantes*/
+.maincolor {
+    color: var(--main-color);
+}
+
+.Monitorear.actividades {
+    background: var(--bg-color);
+}
+
+.Monitorear.actividades .heading span{
+    color: var(--main-color);
+}
+
+.Monitorear.actividades .parrafo p{
+    margin-top: 3rem;
+    font-size: 1.8rem;
+}
+
+.Monitorear.actividades .btn-box .boton-visto{
+    cursor: pointer;
+}
+
+.actividad-estudiante {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.actividad-estudiante h3 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.actividad-estudiante p {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.actividad-estudiante p span {
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.actividad-estudiante a {
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.actividad-estudiante a:hover {
+    color: var(--main-color);
+}
+
+.actividad-estudiante .nombreApellido {
+    color: var(--text-color);
+}
+
+
+
+.listado_estudiantes {
+    background: var(--sec-bg-color);
+}
+
+.listado_estudiantes .table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.listado_estudiantes .table {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1.7rem;
+}
+
+.listado_estudiantes .table th,
+.table td {
+    border: 2px solid var(--text-color);
+    padding: 12px;
+    text-align: left;
+}
+
+.listado_estudiantes .table th {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.listado_estudiantes .table tr {
+    background-color: rgba(0, 0, 0, .4);
+    font-weight: 500;
+}
+
+.listado_estudiantes .heading .color_m{
+    color: var(--main-color);
+}
+
+.informes {
+    background: var(--sec-bg-color);
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.listado_estudiantes .table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.listado_estudiantes .sticky-header th {
+    position: sticky;
+    top: 0;
+}
+
+.gestor {
+    background-image: linear-gradient(to top, #080017, #0f0325, #0f0735, #0a0a45, #030a55);
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Estilo para la tabla */
+table {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+/* Estilo para las celdas de la tabla */
+table, th, td {
+    border: 2px solid var(--text-color);
+    background: var(--sec-bg-color);
+}
+
+/* Estilo para el encabezado de la tabla */
+th {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: left;
+
+}
+
+/* Estilo para las celdas de datos */
+td {
+    padding: 1rem;
+}
+
+
+.gestor .table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.gestor .sticky-header th {
+    position: sticky;
+    top: 0;
+}
+
+.gestor .table tbody tr:last-child {
+    position: sticky;
+    bottom: 0;
+}
+
+.gestor form button {
+    background: none;
+    color: var(--main-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.gestor form button:hover {
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+.gestor a{
+    color: var(--main-color);
+    transition: .3s;
+}
+
+.gestor a:hover{
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+.parrafo{
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navbar a i{
+    font-size: 2.4rem;
+    vertical-align: top;
+    transform: none;
+}
+
+
+/*ICONO MENU*/
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .inicio-img{
+        right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .inicio {
+        padding: 0 4%;
+    }
+
+  
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 1080px){
+    #menu-icon {
+        display: block;
+        }
+    
+        .navbar {
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            width: 100%;
+            padding: 1rem 4%;
+            background: rgba(0,0,0,0.7);
+            transition: .25s ease;
+            transition-delay: .25s;
+        }
+    
+        .navbar.active {
+            left: 0;
+            transition-delay: 0s;
+        }
+    
+    
+        .navbar a {
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+        }
+}
+
+@media (max-width: 870px) {
+    .inicio-img {
+        display: none;
+    }
+
+    .inicio-content h1{
+        text-wrap: balance;
+    }
+
+    #monitorear .actividad-estudiante{
+        width: 50rem;
+    }
+}
+
+
+@media (max-width: 520px) {
+    html {
+        font-size: 48%;
+    }
+
+    .inicio-content h1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 472px) {
+    .inicio-content h1 {
+        font-size: 5.2rem;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+}

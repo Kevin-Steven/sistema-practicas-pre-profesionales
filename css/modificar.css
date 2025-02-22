@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #130034, #12002d, #100026, #0d001e, #080017);
+}
+
+.login-box {
+    position: relative;
+    width: 400px;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+.input-box {
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: -15px; /* Ajusta la distancia entre el label y el input */
+    left: 5px;
+    font-size: 1em; /* Reducción del tamaño de la etiqueta */
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 35px; /* Reducción de la altura del input */
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 5px;
+    padding-top: 15px; /* Ajusta la distancia entre el borde inferior y el texto */
+    border-bottom: 2px solid #fff;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+
+
+
+
+button {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    transition: .3s;
+}
+
+button:hover {
+    background: #1f91cf;
+    color: #fff;
+}
+
+#modificar-form a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 7px; /* Reducción del margen superior */
+    font-size: 0.8em; /* Reducción del tamaño de la fuente */
+    display: block; /* Coloca el enlace en una línea separada */
+    text-align: center;
+}
+
+#modificar-form a:hover {
+    text-decoration: underline;
+}
+
+.mensaje-error {
+    position: absolute;
+    bottom: 400px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #470000;
+    border: 1px solid #f44336;
+    color: #e83629;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.mensaje-error p {
+    margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
+
+/* Pseudo-elemento para crear una flecha/triángulo */
+.mensaje-error::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #f44336 transparent;
+}
+
+.input-box {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.login-box .volver {
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.input-box .icon{
+    display: flex;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 360px) {
+    .login-box {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+
+    .input-box {
+        width: 290px;
+    }
+}
